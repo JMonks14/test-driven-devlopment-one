@@ -62,22 +62,23 @@ public class Questions {
 		// Count occurences of bread
 		int breadCount = sandwichlc.indexOf("bread");
 		if (breadCount != -1) {
-			StringBuilder sb = new StringBuilder();
-			sb.append(sandwichlc);
-			String sub = sb.substring(breadCount+5);
+			
+			String sub = sandwichlc.substring(breadCount+5);
 			
 			// Check for second occurence of bread
 			if (!(sub.contains("bread"))) { 
 				return ""; 
 			} else {
 				// Build string
-				String[] stArray = sandwichlc.split("bread");
-				StringBuilder sb2 = new StringBuilder();
-				String filling = stArray[1];
-				
-				sb2.append(filling);
-				sb2.reverse();
-				ret = sb2.toString();
+//				String[] stArray = sandwichlc.split("bread");
+//				StringBuilder sb2 = new StringBuilder();
+//				String filling = stArray[1];
+				int last =sub.lastIndexOf("bread");
+				String sub2 = sub.substring(0, last);
+				StringBuilder sb3 = new StringBuilder();
+				sb3.append(sub2);
+				sb3.reverse();
+				ret = sb3.toString();
 				return ret;
 			}
 		} else {

@@ -47,6 +47,7 @@ public class QuestionTest {
 		assertEquals("egdirf", questions.sandwichFilling("xxBreadfridgeBReAdyy"));
 		assertEquals("", questions.sandwichFilling("xxbreadyy"));
 		assertEquals("", questions.sandwichFilling("xxbreADyy"));
+		assertEquals("plehdaerbpleh", questions.sandwichFilling("bshdjbvdbreadhelpbreadhelpbreadbhjewbfes"));
 	}
 	
 	@Test
